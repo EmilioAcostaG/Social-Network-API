@@ -27,15 +27,15 @@ const userSeeds = [
 
 const thoughtSeeds = [
   {
-    thought: 'Is the earth flat?',
+    thoughtText: 'Is the earth flat?',
     username: "Billy"
   },
   {
-    thought: 'What time do we leave?',
+    thoughtText: 'What time do we leave?',
     username: 'Sofie'
   },
   {
-    thought: 'Wanna be my friend?',
+    thoughtText: 'Wanna be my friend?',
     username: 'Joe'
   }
 ]

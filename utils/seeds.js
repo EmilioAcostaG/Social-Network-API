@@ -1,5 +1,5 @@
 const connection = require('../config/connection');
-const { userData } = require('../models');
+const { User, Thoughts } = require('../models');
 const { userSeeds, thoughtSeeds } = require('./data')
 
 
@@ -9,14 +9,14 @@ connection.once('open', async () => {
   console.log('connected');
 
   // drop existing user
-  await userData.user.deleteMany({});
-  await userData.thoughts.deleteMany({});
+  await User.deleteMany({});
+  await Thoughts.deleteMany({});
 
   const users = userSeeds
   const thoughts = thoughtSeeds
 
-  await userData.user.collection.insertMany(users);
-  await userData.thoughts.collection.insertMany(thoughts);
+  await User.collection.insertMany(users);
+  await Thoughts.collection.insertMany(thoughts);
 
   console.table(users);
   console.info('Seeding complete! 🌱');

@@ -1,13 +1,9 @@
-const { Schema, Types } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const reactionSchema = require('./Reaction')
 
 
 const thoughtSchema = new Schema(
   {
-    _id: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
     thoughtText: {
       type: String,
       required: true,
